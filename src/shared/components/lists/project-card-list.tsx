@@ -1,4 +1,3 @@
-import React from 'react';
 import ProjectCard from '@/shared/components/cards/project-card.tsx';
 
 const ProjectCardList = () => {

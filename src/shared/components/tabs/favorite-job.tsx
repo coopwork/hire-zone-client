@@ -1,6 +1,5 @@
 import { Typography } from '@/shared/ui/typography.tsx';
 import JobCardList from '@/shared/components/lists/job-card-list.tsx';
-import React from 'react';
 
 const FavoriteJob = () => {
   return (

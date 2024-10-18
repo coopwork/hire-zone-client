@@ -1,5 +1,4 @@
 import { Typography } from '@/shared/ui/typography.tsx';
-import React from 'react';
 import ProjectCardList from '@/shared/components/lists/project-card-list.tsx';
 
 const FavoriteProject = () => {

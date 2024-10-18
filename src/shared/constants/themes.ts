@@ -1,4 +1,6 @@
-export const THEMES = [
+import { ThemeObjectType } from '@/shared/types/themes.type.ts';
+
+export const THEMES: ThemeObjectType[] = [
   {
     label: { ru: 'Темная', en: 'Dark', kk: 'Қараңғы' },
     value: 'dark',

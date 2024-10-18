@@ -1,0 +1,28 @@
+{
+  "app_name": "English",
+  "pages": {
+    "sign_up": {
+      "title": "Регистрация"
+    },
+    "home": {
+      "title": "Главная",
+      "tab_titles": {
+        "jobs": "Вакансии",
+        "projects": "Проекты"
+      }
+    },
+    "favorites": {
+      "title": "Избранное",
+      "tab_titles": {
+        "jobs": "Вакансии",
+        "projects": "Проекты"
+      }
+    },
+    "responses": {
+      "title": "Отклики"
+    },
+    "profile": {
+      "title": "Профиль"
+    }
+  }
+}

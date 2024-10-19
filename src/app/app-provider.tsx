@@ -12,16 +12,16 @@ const AppProvider = ({ children }: IWrapperProps) => {
   return (
     <Localize>
       <QueryClientProvider client={queryClient}>
-        <UserProfile>
-          <BrowserRouter>
+        <BrowserRouter>
+          <UserProfile>
             <PageInfoProvider>
               <ThemeProvider defaultTheme="dark" storageKey="ui-theme">
                 {children}
                 <Toaster position="top-center" />
               </ThemeProvider>
             </PageInfoProvider>
-          </BrowserRouter>
-        </UserProfile>
+          </UserProfile>
+        </BrowserRouter>
       </QueryClientProvider>
     </Localize>
   );

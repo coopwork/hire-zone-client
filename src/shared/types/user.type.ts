@@ -28,5 +28,5 @@ export type UserSetterType =
 
 export type UserProviderType = {
   user: UserType;
-  setUser: (user: UserType) => void;
+  setUser: (user: UserSetterType) => void;
 };

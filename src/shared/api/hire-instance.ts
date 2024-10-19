@@ -13,6 +13,6 @@ export const hireAPI = axios.create({
 });
 
 export const hireCRM = axios.create({
-  baseURL: ENV.HIRE_API_URL,
+  baseURL: ENV.HIRE_CRM_URL,
   withCredentials: true,
 });

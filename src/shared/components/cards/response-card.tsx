@@ -32,7 +32,7 @@ const ResponseCard = () => {
           </Avatar>
           <div>
             <Typography className="flex items-center gap-1" tag="small">
-              <AwardIcon className="w-3 h-3 text-primary" />
+              <AwardIcon className="w-3 h-3 text-accent" />
               LowCode DDoS inc.
             </Typography>
             <Typography className="flex items-center gap-1" tag="h6">
@@ -43,7 +43,9 @@ const ResponseCard = () => {
         </section>
       </CardContent>
       <CardFooter>
-        <Button className="w-full">Смотреть</Button>
+        <Button variant="gradient" className="w-full">
+          Смотреть
+        </Button>
       </CardFooter>
     </Card>
   );

@@ -52,7 +52,7 @@ const JobCard = ({ details }: JobCardProps) => {
           </Avatar>
           <div>
             <Typography className="flex items-center gap-1" tag="small">
-              <AwardIcon className="w-3 h-3 text-primary" />
+              <AwardIcon className="w-3 h-3 text-accent" />
               LowCode DDoS inc.
             </Typography>
             <Typography className="flex items-center gap-1" tag="h6">
@@ -62,7 +62,7 @@ const JobCard = ({ details }: JobCardProps) => {
           </div>
         </section>
         <article>
-          <Badge variant="destructive" className="mt-5">
+          <Badge variant="warning" className="mt-5">
             Подходит по навыкам на 85%
           </Badge>
           <Typography className="block mt-2" tag="small">
@@ -75,7 +75,11 @@ const JobCard = ({ details }: JobCardProps) => {
       <CardFooter className="gap-2">
         <CoverLetterModal
           jobDetails={details}
-          children={<Button className="w-full">Откликнуться</Button>}
+          children={
+            <Button variant="gradient" className="w-full">
+              Откликнуться
+            </Button>
+          }
         />
 
         <Button

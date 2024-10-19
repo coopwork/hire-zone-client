@@ -12,7 +12,7 @@ export default {
   theme: {
     extend: {
       container: {
-        center: 'true',
+        center: true,
         padding: '0.5rem',
       },
       borderRadius: {
@@ -46,6 +46,14 @@ export default {
         accent: {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',
+        },
+        success: {
+          DEFAULT: 'hsl(var(--success))',
+          foreground: 'hsl(var(--success-foreground))',
+        },
+        warning: {
+          DEFAULT: 'hsl(var(--warning))',
+          foreground: 'hsl(var(--warning-foreground))',
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',

@@ -42,9 +42,7 @@ const CoverLetterModal = ({ children, jobDetails }: CoverLetterModalProps) => {
           />
         </Container>
         <DrawerFooter>
-          <Button variant="gradient" onClick={handleSubmitResponse}>
-            Откликнуться
-          </Button>
+          <Button variant='gradient' onClick={handleSubmitResponse}>Откликнуться</Button>
           <DrawerClose asChild>
             <Button variant="outline">Отмена</Button>
           </DrawerClose>

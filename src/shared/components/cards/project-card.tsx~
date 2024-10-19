@@ -74,11 +74,7 @@ const ProjectCard = ({ details }: ProjectCardProps) => {
       <CardFooter className="gap-2">
         <CoverLetterModal
           jobDetails={details}
-          children={
-            <Button variant="gradient" className="w-full">
-              Откликнуться
-            </Button>
-          }
+          children={<Button variant='gradient' className="w-full">Откликнуться</Button>}
         />
 
         <Button

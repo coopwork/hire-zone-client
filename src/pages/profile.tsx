@@ -9,6 +9,8 @@ import { useLayoutEffect } from 'react';
 import { usePageInfo } from '@/shared/hooks/usePageInfo.tsx';
 import { Input } from '@/shared/ui/input.tsx';
 import useUser from '@/shared/hooks/useUser.tsx';
+import { Button } from '@/shared/ui/button.tsx';
+import { Card } from '@/shared/ui/card.tsx';
 
 const mockAvatar =
   'https://images.ctfassets.net/lh3zuq09vnm2/yBDals8aU8RWtb0xLnPkI/19b391bda8f43e16e64d40b55561e5cd/How_tracking_user_behavior_on_your_website_can_improve_customer_experience.png';
@@ -55,6 +57,11 @@ const Profile = () => {
       <div>{t('app_name')}</div>
 
       <UserActivityChart />
+
+      <Button className="w-full">Добавить резюме</Button>
+      <Card className="border-dashed border-primary/15 p-2.5 text-center text-foreground/50 mt-5">
+        Список резюме пуст
+      </Card>
     </Container>
   );
 };

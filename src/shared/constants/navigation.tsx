@@ -3,9 +3,9 @@ import { PATHS } from '@/shared/constants/paths.ts';
 
 const navigationSettings = {
   iconStrokeWidth: 1.75,
-  iconsStyle: 'w-9 h-9',
+  iconsStyle: 'w-7 h-7',
   styles: {
-    active: 'text-primary/50 pointer-events-none cursor-default',
+    active: 'text-accent/50 pointer-events-none cursor-default',
     common: 'text-secondary-foreground/75 hover:text-foreground',
   },
 };

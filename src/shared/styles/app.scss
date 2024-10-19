@@ -1,7 +1,10 @@
 html,
-body {
+body,
+#root {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 img,
@@ -11,4 +14,23 @@ svg {
   -ms-user-select: none;
   -webkit-user-select: none;
   -webkit-user-drag: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+.scroll-hide::-webkit-scrollbar {
+  display: none;
 }

@@ -5,21 +5,25 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClient } from '@/shared/api/query-client.ts';
 import { Toaster } from '@/shared/ui/sonner.tsx';
 import Localize from '@/features/localize/localize.tsx';
+import PageInfoProvider from '@/features/page-info/page-info-provider.tsx';
+import UserProfile from '@/features/user-profile/user-profile.tsx';
 
 const AppProvider = ({ children }: IWrapperProps) => {
   return (
-    // <SDKProvider acceptCustomStyles>
     <Localize>
       <QueryClientProvider client={queryClient}>
-        <BrowserRouter>
-          <ThemeProvider defaultTheme="dark" storageKey="ui-theme">
-            {children}
-            <Toaster position="top-center" />
-          </ThemeProvider>
-        </BrowserRouter>
+        <UserProfile>
+          <BrowserRouter>
+            <PageInfoProvider>
+              <ThemeProvider defaultTheme="dark" storageKey="ui-theme">
+                {children}
+                <Toaster position="top-center" />
+              </ThemeProvider>
+            </PageInfoProvider>
+          </BrowserRouter>
+        </UserProfile>
       </QueryClientProvider>
     </Localize>
-    // </SDKProvider>
   );
 };
 

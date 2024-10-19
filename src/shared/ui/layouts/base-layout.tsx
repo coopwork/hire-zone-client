@@ -1,10 +1,12 @@
 import { IWrapperProps } from '@/shared/types/wrapper.interface.ts';
 import BottomNavigation from '@/shared/ui/base/bottom-navigation.tsx';
+import AppHeader from '@/shared/ui/base/app-header.tsx';
 
 const BaseLayout = ({ children }: IWrapperProps) => {
   return (
     <div className="w-full h-screen">
-      <div className="w-full pt-2 pb-16">{children}</div>
+      <AppHeader />
+      <div className="w-full pt-12 pb-16">{children}</div>
       <BottomNavigation />
     </div>
   );

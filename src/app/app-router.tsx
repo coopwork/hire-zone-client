@@ -1,26 +1,26 @@
 import { Route, Routes } from 'react-router-dom';
 import { ROUTES } from '@/shared/lib/routing/routes.tsx';
-import { useSessionQuery } from '@/entities/session/queries.ts';
-import { useLaunchParams } from '@telegram-apps/sdk-react';
 import { Suspense } from 'react';
 import PageLoader from '@/shared/ui/page-loader.tsx';
+import useUser from '@/shared/hooks/useUser.tsx';
 
 const AppRouter = () => {
-  const { initData } = useLaunchParams();
-  console.log(initData);
-  const { isLoading, isError } = useSessionQuery();
-  if (isLoading) {
-    return <PageLoader />;
-  }
+  const { user } = useUser();
   return (
     <Routes>
-      {ROUTES[isError ? 'unknown' : 'user'].map(({ path, element }) => (
-        <Route
-          key={path}
-          path={path}
-          element={<Suspense fallback={<PageLoader />}>{element}</Suspense>}
-        />
-      ))}
+      {ROUTES[user?.isAuth ? 'user' : 'unknown'].map(
+        ({ path, element, layout: Layout }) => (
+          <Route
+            key={path}
+            path={path}
+            element={
+              <Layout>
+                <Suspense fallback={<PageLoader />}>{element}</Suspense>
+              </Layout>
+            }
+          />
+        ),
+      )}
     </Routes>
   );
 };

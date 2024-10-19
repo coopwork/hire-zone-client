@@ -7,7 +7,7 @@ const FavoriteJobProjects = () => {
   const { t } = useTranslation();
   return (
     <Tabs defaultValue="job" className="w-full">
-      <TabsList className="sticky top-0 w-full flex gap-1 py-2 bg-secondary/95 backdrop-blur-sm z-10">
+      <TabsList className="sticky top-9 w-full flex gap-1 py-2 bg-secondary/95 backdrop-blur-sm z-10">
         <TabsTrigger className="w-full" value="job">
           {t('pages.favorites.tab_titles.jobs')}
         </TabsTrigger>

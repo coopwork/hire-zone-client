@@ -12,47 +12,62 @@ const PAGE = {
   REGISTRATION: lazy(() => import('@/pages/sign-up.tsx')),
   JOB_DETAILS: lazy(() => import('@/pages/job-details.tsx')),
   PROJECT_DETAILS: lazy(() => import('@/pages/project-details.tsx')),
+  HINT_DETAILS: lazy(() => import('@/pages/hint-details.tsx')),
 };
 
 const unknown: RouteType[] = [
   {
     path: '*',
-    element: <UnregisteredLayout children={<PAGE.REGISTRATION />} />,
+    element: <PAGE.REGISTRATION />,
+    layout: UnregisteredLayout,
   },
   {
     path: PATHS.SIGN_UP,
-    element: <UnregisteredLayout children={<PAGE.REGISTRATION />} />,
+    element: <PAGE.REGISTRATION />,
+    layout: UnregisteredLayout,
   },
 ];
 
 const user: RouteType[] = [
   {
     path: '*',
-    element: <BaseLayout children={<PAGE.HOME />} />,
+    element: <PAGE.HOME />,
+    layout: BaseLayout,
   },
   {
     path: PATHS.HOME,
-    element: <BaseLayout children={<PAGE.HOME />} />,
+    element: <PAGE.HOME />,
+    layout: BaseLayout,
   },
   {
     path: PATHS.FAVORITES,
-    element: <BaseLayout children={<PAGE.FAVORITES />} />,
+    element: <PAGE.FAVORITES />,
+    layout: BaseLayout,
   },
   {
     path: PATHS.RESPONSES,
-    element: <BaseLayout children={<PAGE.RESPONSES />} />,
+    element: <PAGE.RESPONSES />,
+    layout: BaseLayout,
   },
   {
     path: PATHS.PROFILE,
-    element: <BaseLayout children={<PAGE.PROFILE />} />,
+    element: <PAGE.PROFILE />,
+    layout: BaseLayout,
   },
   {
     path: PATHS.JOB_DETAILS,
-    element: <BaseLayout children={<PAGE.JOB_DETAILS />} />,
+    element: <PAGE.JOB_DETAILS />,
+    layout: BaseLayout,
   },
   {
     path: PATHS.PROJECT_DETAILS,
-    element: <BaseLayout children={<PAGE.PROJECT_DETAILS />} />,
+    element: <PAGE.PROJECT_DETAILS />,
+    layout: BaseLayout,
+  },
+  {
+    path: PATHS.HINT_DETAILS,
+    element: <PAGE.HINT_DETAILS />,
+    layout: BaseLayout,
   },
 ];
 

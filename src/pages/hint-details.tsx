@@ -1,22 +1,23 @@
+import { useParams } from 'react-router-dom';
 import Container from '@/shared/ui/wrappers/container.tsx';
-import SearchJobProjects from '@/shared/components/blocks/search-job-projects.tsx';
 import { usePageInfo } from '@/shared/hooks/usePageInfo.tsx';
 import { useLayoutEffect } from 'react';
 
-const Home = () => {
+const HintDetails = () => {
+  const { hintId } = useParams();
   const { setPageInfo } = usePageInfo();
 
   useLayoutEffect(() => {
     setPageInfo({
-      title: 'Работа',
-      name: 'Работа',
+      title: 'Помощь',
+      name: 'Помощь',
     });
   }, []);
   return (
     <Container>
-      <SearchJobProjects />
+      <div>hint details: {hintId}</div>
     </Container>
   );
 };
 
-export default Home;
+export default HintDetails;

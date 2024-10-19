@@ -6,4 +6,5 @@ export const PATHS = {
   SIGN_UP: '/sign-up',
   JOB_DETAILS: '/job-details/:jobId',
   PROJECT_DETAILS: '/project-details/:projectId',
+  HINT_DETAILS: '/hints/:hintId',
 } as const;
